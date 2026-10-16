@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .checkerboard-pattern {
+    background-image: linear-gradient(45deg, #e2e8f0 25%, transparent 25%),
+                      linear-gradient(-45deg, #e2e8f0 25%, transparent 25%),
+                      linear-gradient(45deg, transparent 75%, #e2e8f0 75%),
+                      linear-gradient(-45deg, transparent 75%, #e2e8f0 75%);
+    background-size: 16px 16px;
+    background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+    background-color: #ffffff;
+  }
+  
+  .checkerboard-pattern-dark {
+    background-image: linear-gradient(45deg, #334155 25%, transparent 25%),
+                      linear-gradient(-45deg, #334155 25%, transparent 25%),
+                      linear-gradient(45deg, transparent 75%, #334155 75%),
+                      linear-gradient(-45deg, transparent 75%, #334155 75%);
+    background-size: 16px 16px;
+    background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+    background-color: #1e293b;
+  }
+
+  .pixelated {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+  }
+
+  .font-pixel {
+    font-family: 'Press Start 2P', monospace;
+  }
+
+  .font-jua {
+    font-family: 'Jua', 'Noto Sans KR', sans-serif;
+  }
+}
+
+/* Touch prevention on canvas */
+canvas {
+  touch-action: none;
+}
